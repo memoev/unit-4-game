@@ -1,3 +1,22 @@
-html, body {
+html body {
     background: url(../images/background.gif)
+}
+
+/* Container for logo and subtitle */
+.container {
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 10px;
+}
+
+#main-logo {
+    display: inline-block;
+    width: 350px;
+    height: 150px;
+}
+
+#subtitle {
+    line-height: 1px;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
 }
