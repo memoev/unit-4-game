@@ -17,7 +17,8 @@ html body {
 
 #subtitle {
     line-height: 1px;
-    font-family: 'Press Start 2P', cursive;    font-size: 40px;
+    font-family: 'Press Start 2P', cursive;    
+    font-size: 40px;
     color: #FFD700;
 }
 
@@ -27,8 +28,18 @@ html body {
     width: 100%;
 }
 
-#character-container {
+#character-box {
     padding: 10px;
+}
+
+#character-container {
+    display: inline-block;
+}
+
+h6 {
+    font-family: 'Press Start 2P', cursive;    
+    color: #ffffff;
+    margin: 0px;
 }
 
 /* Dynamic image container */
