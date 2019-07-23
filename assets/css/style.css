@@ -32,7 +32,7 @@ html body {
     padding: 10px;
 }
 
-#character-container {
+.character-container {
     display: inline-block;
 }
 
