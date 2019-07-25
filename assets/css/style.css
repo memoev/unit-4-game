@@ -24,17 +24,16 @@ html body {
 
 /* Container for dynamic elements */
 #main-content {
-    display: inline-block;
     width: 100%;
 }
 
-#character-box {
-    padding: 10px;
+.character {
+    display: inline-block; 
 }
 
 .character-container {
-    display: inline-block;
     border: solid 1px #ffffff;
+    display: inline-block;
 }
 
 h6 {
@@ -45,16 +44,13 @@ h6 {
 }
 
 /* Dynamic image container */
-#character {
+#character-image {
     width: 200px;
     height: 100px;
 }
 
 p {
-    font-family: 'Press Start 2P', cursive;    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
     color: #ffffff;
-}
-
-#selected-character {
-    text-align: center;
 }
