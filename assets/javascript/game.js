@@ -5,14 +5,15 @@ $('.character').click(function () {
     
     $('.character').each( function() {
         if ($(this).html() === htmlString) {
-            console.log('hey');
+            //console.log('hey');
             $(this).find('h6').css('background', '#008000');
-            console.log($(this).html());
+            //console.log($(this).html());
             $('#selected-container').append($(this).html());
         } else {
-            console.log('not');
+            //console.log('not');
             $(this).find('h6').css('background', '#B22222');
-            console.log($(this).html());
+            $(this).find('div').wrapAll("<div class='enemy' />"); 
+            //console.log($(this).html());
             $('#enemies-container').append($(this).html());
         }
     })
