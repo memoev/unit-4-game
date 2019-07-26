@@ -37,6 +37,11 @@ $('.character').click(function () {
 
     $(':button').click( function () {
 
+        defense = parseInt($('#defender-container').find('.health').text());
+        console.log(attack);
+        attack = attack * 2;
+        console.log(defense);
+
     })
 
 });
