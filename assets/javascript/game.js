@@ -1,3 +1,6 @@
+var attack = 8;
+var defense;
+
 $('.character').click(function () {
     let htmlString = $(this).html();
     //console.log(htmlString);
@@ -31,4 +34,9 @@ $('.character').click(function () {
             alert("Don't get ahead of yourself young Padawan. Even though the force is strong in you, take out one enemy at the time.");
         }
     });
+
+    $(':button').click( function () {
+
+    })
+
 });
