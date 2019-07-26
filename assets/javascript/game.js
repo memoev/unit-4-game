@@ -1,3 +1,7 @@
+var attack = 8;
+var defense;
+
+
 $('.character').click(function () {
     let htmlString = $(this).html();
     //console.log(htmlString);
@@ -19,4 +23,17 @@ $('.character').click(function () {
     })
     
     $('#character-box').empty();
+
+    $('.enemy').click(function () {
+        console.log($('#defender-container').is(':empty'));
+        if ($('#defender-container').is(':empty')) {
+            $(this).find('h6').css('color', '#ffffff');
+            let htmlEnemyString = $(this).html();
+            console.log(htmlEnemyString);
+            $('#defender-container').append(htmlEnemyString)
+            $(this).find('div').remove();
+        } else {
+            alert("Don't get ahead of yourself young Padawan. Even though the force is strong in you, take out one enemy at the time.");
+        }
+    });
 });
