@@ -1,5 +1,7 @@
 var attack = 8;
-var defense;
+var counterAttack = 5;
+var defenseCharacter;
+var defenseEnemy;
 
 $('.character').click(function () {
     let htmlString = $(this).html();
@@ -37,10 +39,26 @@ $('.character').click(function () {
 
     $(':button').click( function () {
 
-        defense = parseInt($('#defender-container').find('.health').text());
-        console.log(attack);
+        defenseEnemy = parseInt($('#defender-container').find('.health').text());
+        defenseCharacter = parseInt($('#selected-container').find('.health').text());
+        //console.log(defenseEnemy);        
+        defenseEnemy =  defenseEnemy - attack;
+        defenseCharacter = defenseCharacter - counterAttack;
+        console.log(defenseEnemy);
+        console.log(defenseCharacter);
+        //console.log(attack);
         attack = attack * 2;
-        console.log(defense);
+        console.log(attack);
+        $('#defender-container').find('.health').html(defenseEnemy);
+        $('#selected-container').find('.health').html(defenseCharacter);
+
+        if (defenseEnemy <= 0) {
+            $('#defender-container').empty();  
+        }
+
+        if (defenseCharacter <= 0) {
+            $('#selected-container').empty();
+        }
 
     })
 
