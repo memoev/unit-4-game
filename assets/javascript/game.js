@@ -1,7 +1,3 @@
-var attack = 8;
-var defense;
-
-
 $('.character').click(function () {
     let htmlString = $(this).html();
     //console.log(htmlString);
@@ -27,7 +23,6 @@ $('.character').click(function () {
     $('.enemy').click(function () {
         console.log($('#defender-container').is(':empty'));
         if ($('#defender-container').is(':empty')) {
-            $(this).find('h6').css('color', '#ffffff');
             let htmlEnemyString = $(this).html();
             console.log(htmlEnemyString);
             $('#defender-container').append(htmlEnemyString)
