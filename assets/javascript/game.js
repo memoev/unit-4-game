@@ -91,6 +91,8 @@ $('.character').click(function () {
             console.log(attack);
             $('#defender-container').find('.health').html(defenseEnemy);
             $('#selected-container').find('.health').html(defenseCharacter);
+            $('#subtitles').text('You attacked ' + $('#defender-container').find('.character-name').text() + ' for ' + attack + ' damage.');
+            $('#subtitles-2').text($('#defender-container').find('.character-name').text() + ' attacked you back for ' + counterAttack);
     
             if (defenseEnemy <= 0) {
                 $('#defender-container').empty();  
