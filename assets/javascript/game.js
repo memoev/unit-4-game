@@ -5,16 +5,16 @@ var defenseEnemy;
 
 var darthVader = {
     attackPower: 12
-}
+};
 var Yoda = {
-    attackPower: 10
-}
+    attackPower: 6
+};
 var darthMaul = {
-    attackPower: 8
-}
+    attackPower: 10 // do not move
+};
 var Luke = {
     attackPower: 6
-}
+};
 
 $('.character').click(function () {
     let htmlString = $(this).html();
@@ -59,13 +59,13 @@ $('.character').click(function () {
             $('#defender-container').append(htmlEnemyString)
 
             if ($(this).find('div').attr('id') === 'darth-vader') {
-                counterAttack = darthVader.attackPower * 1.5;
+                counterAttack = darthVader.attackPower * 3;
             } else if ($(this).find('div').attr('id') === 'yoda') {
-                counterAttack = Yoda.attackPower * 1.5;
+                counterAttack = Yoda.attackPower * 5;
             } else if ($(this).find('div').attr('id') === 'darth-maul') {
-                counterAttack = darthMaul.attackPower * 1.5;
+                counterAttack = darthMaul.attackPower * 1;
             } else if ($(this).find('div').attr('id') === 'luke') {
-                counterAttack = Luke.attackPower * 1.5;
+                counterAttack = Luke.attackPower * 1;
             }
             console.log(counterAttack);
 
