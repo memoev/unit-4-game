@@ -2,6 +2,8 @@ var attack;
 var counterAttack;
 var defenseCharacter;
 var defenseEnemy;
+var deathCounter = 0;
+var defeatCounter = 0;
 
 var darthVader = {
     attackPower: 12
@@ -15,8 +17,6 @@ var darthMaul = {
 var Luke = {
     attackPower: 6
 };
-var deathCounter = 0;
-var defeatCounter = 0;
 
 $('.character').click(function () {
     let htmlString = $(this).html();
