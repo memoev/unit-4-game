@@ -12,7 +12,7 @@ var Yoda = {
     attackPower: 6
 };
 var darthMaul = {
-    attackPower: 10 // do not move
+    attackPower: 10
 };
 var Luke = {
     attackPower: 6
@@ -20,18 +20,13 @@ var Luke = {
 
 $('.character').click(function () {
     let htmlString = $(this).html();
-    //console.log(htmlString);
-    //console.log($('#character-box').not($(this)).html());
     
     $('.character').each( function() {
         if ($(this).html() === htmlString) {
-            //console.log('hey');
             $(this).find('h6').css('background', '#008000');
             $(this).find('h6').css('color', '#ffffff');
-            //console.log($(this).html());
             $('#selected-container').append($(this).html());
 
-            //console.log($(this).find('div').attr('id'));
             if ($(this).find('div').attr('id') === 'darth-vader') {
                 attack = darthVader.attackPower;
             } else if ($(this).find('div').attr('id') === 'yoda') {
@@ -41,14 +36,11 @@ $('.character').click(function () {
             } else if ($(this).find('div').attr('id') === 'luke') {
                 attack = Luke.attackPower;
             }
-            //console.log(attack);
 
         } else {
-            //console.log('not');
             $(this).find('h6').css('background', '#B22222');
             $(this).find('h6').css('color', '#ffffff');
             $(this).find('div').wrapAll("<div class='enemy' />"); 
-            //console.log($(this).html());
             $('#enemies-container').append($(this).html());
         }
     })
@@ -87,12 +79,10 @@ $('.character').click(function () {
 
             defenseEnemy = parseInt($('#defender-container').find('.health').text());
             defenseCharacter = parseInt($('#selected-container').find('.health').text());
-            //console.log(defenseEnemy);        
             defenseEnemy =  defenseEnemy - attack;
             defenseCharacter = defenseCharacter - counterAttack;
             console.log(defenseEnemy);
             console.log(defenseCharacter);
-            //console.log(attack);
             $('#subtitles').text('You attacked ' + $('#defender-container').find('.character-name').text() + ' for ' + attack + ' damage.');
             attack = attack * 2;
             console.log(attack);
@@ -116,12 +106,6 @@ $('.character').click(function () {
             alert('Enemy must be selected to attack.')
         };
         
-        // console.log($('#enemies-container').is(':empty'));
-        // console.log($('#enemies-container'));
-        // console.log($('.enemy').html());
-        // console.log($('#defender-container').is(':empty'));
-        // console.log($('#defender-container').html());
-    
         if (deathCounter >= 3) {
             $('#subtitles').text('You won!! GAME OVER!');
             $('#restart').css('visibility', 'visible');
@@ -133,8 +117,6 @@ $('.character').click(function () {
             $('#restart').css('visibility', 'visible');
             $('#attack').off('click');
         }
-        
-        // console.log($('#enemies-container').is(':empty'));
         
     });
     $('#restart').click(function () { 
