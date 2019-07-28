@@ -25,6 +25,7 @@ $('.character').click(function () {
         if ($(this).html() === htmlString) {
             //console.log('hey');
             $(this).find('h6').css('background', '#008000');
+            $(this).find('h6').css('color', '#ffffff');
             //console.log($(this).html());
             $('#selected-container').append($(this).html());
 
@@ -43,6 +44,7 @@ $('.character').click(function () {
         } else {
             //console.log('not');
             $(this).find('h6').css('background', '#B22222');
+            $(this).find('h6').css('color', '#ffffff');
             $(this).find('div').wrapAll("<div class='enemy' />"); 
             //console.log($(this).html());
             $('#enemies-container').append($(this).html());
@@ -69,7 +71,9 @@ $('.character').click(function () {
             }
             console.log(counterAttack);
 
-            $(this).find('div').remove();
+            $(this).remove();
+            $('#subtitles').empty(); 
+
         } else {
             alert("Don't get ahead of yourself young Padawan. Even though the force is strong in you, take out one enemy at the time.");
         }
@@ -87,26 +91,39 @@ $('.character').click(function () {
             console.log(defenseEnemy);
             console.log(defenseCharacter);
             //console.log(attack);
+            $('#subtitles').text('You attacked ' + $('#defender-container').find('.character-name').text() + ' for ' + attack + ' damage.');
             attack = attack * 2;
             console.log(attack);
             $('#defender-container').find('.health').html(defenseEnemy);
             $('#selected-container').find('.health').html(defenseCharacter);
-            $('#subtitles').text('You attacked ' + $('#defender-container').find('.character-name').text() + ' for ' + attack + ' damage.');
             $('#subtitles-2').text($('#defender-container').find('.character-name').text() + ' attacked you back for ' + counterAttack);
     
             if (defenseEnemy <= 0) {
-                $('#defender-container').empty();  
-            }
+                $('#subtitles').text('You just defeated ' + $('#defender-container').find('.character-name').text() + ', you can choose to fight another enemy.');
+                $('#subtitles-2').text('');  
+                $('#defender-container').empty();
+            };
     
             if (defenseCharacter <= 0) {
                 $('#selected-container').empty();
-            }
-
+            };
+            
         } else {
             alert('Enemy must be selected to attack.')
-        }
+        };
+        
+        // console.log($('#enemies-container').is(':empty'));
+        // console.log($('#enemies-container'));
+        // console.log($('.enemy').html());
+        // console.log($('#defender-container').is(':empty'));
+        // console.log($('#defender-container').html());
+    
+        // if ($('#defender-container').is(':empty') && $('#enemies-container').is(':empty')) {
+        //     $('#subtitles').text('You won!! GAME OVER!');
+        // }
+        
+        // console.log($('#enemies-container').is(':empty'));
 
-
-    })
-
+    });
+  
 });
