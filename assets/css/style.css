@@ -2,7 +2,7 @@ html body {
     background: url(../images/background.jpg)
 }
 
-/* Container for logo and subtitle */
+/* Container for logo and subtitle of logo */
 .container {
     text-align: center;
     margin: 50px;
@@ -36,6 +36,7 @@ html body {
     display: inline-block;
 }
 
+/* name and health container */
 h6 {
     font-family: 'Press Start 2P', cursive;    
     color: #000000;
@@ -43,6 +44,7 @@ h6 {
     background: #ffffff
 }
 
+/* enemies container */
 .enemy {
     display: inline-block;
 }
@@ -59,6 +61,7 @@ p {
     color: #ffffff;
 }
 
+/* Subtitles style */
 #subtitles {
     font-family: 'Press Start 2P', cursive;
     font-weight: bold;
