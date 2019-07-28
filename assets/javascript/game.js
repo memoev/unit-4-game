@@ -15,6 +15,7 @@ var darthMaul = {
 var Luke = {
     attackPower: 6
 };
+var deathCounter = 0;
 
 $('.character').click(function () {
     let htmlString = $(this).html();
