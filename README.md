@@ -14,7 +14,7 @@ The player will keep hitting the attack button in an effort to defeat their oppo
   
 The player wins the game by defeating all enemy characters. The player loses the game the game if their character's HP falls to zero or below.  
   
-Each character in the game has 1 attributes: `Attack Power`. Each time the player attacks, their character's `Attack Power` doiubles. For example, if the base Attack Power is 6, each attack will increase the Attack Power by 6 (12, 18, 24, 30 and so on).
+Each character in the game has 1 attribute(s): `Attack Power`. Each time the player attacks, their character's `Attack Power` doiubles. For example, if the base Attack Power is 6, each attack will increase the Attack Power by 6 (12, 18, 24, 30 and so on).
 
 The enemy character only has `Counter Attack Power`, which is calculated as a multiple of the character's Attack Power. Unlike the player's Attack Points, `Counter Attack Power` never changes.  
   
