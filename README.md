@@ -1,4 +1,4 @@
-# unit-4-game
+# Star Wars RPG
 Fun and interactive game for web browsers dynamically updating HTML pages with the jQuery library:pushpin:.  
   
 # Instructions :memo:  
