@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- link to css style document inside repo -->
     <link rel="stylesheet" href="../unit-4-game/assets/css/style.css">
+    <!-- link to jquery lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- link to google font style -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Star Wars RPG Game</title>
 </head>
@@ -21,10 +24,12 @@
     <!-- Container for game dynamic elements -->
     <div class="container">
         <div id="main-content">
+            <!-- character selection -->
             <p>
                 Select Character
             </p>
             <div id="character-box">
+                <!-- darth vader -->
                 <div class="character">
                     <div id="darth-vader" class="character-container">
                         <h6 class="character-name">Darth Vader</h6>
@@ -32,6 +37,7 @@
                         <h6 class="health">130</h6>
                     </div>
                 </div>
+                <!-- yoda -->
                 <div class="character">
                     <div id="yoda" class="character-container">
                         <h6 class="character-name">Yoda</h6>
@@ -39,6 +45,7 @@
                         <h6 class="health">150</h6>
                     </div>
                 </div>
+                <!-- darth maul -->
                 <div class="character">
                     <div id="darth-maul" class="character-container">
                         <h6 class="character-name">Darth Maul</h6>
@@ -46,6 +53,7 @@
                         <h6 class="health">100</h6>
                     </div>
                 </div>
+                <!-- luke skywalker -->
                 <div class="character">
                     <div id="luke" class="character-container">
                         <h6 class="character-name">Luke Skywalker</h6>
@@ -54,22 +62,26 @@
                     </div>
                 </div>
             </div>
+            <!-- selected character -->
             <p id="selected-character">
                 Your Character
                 <div id="selected-container">
 
                 </div>
             </p>
+            <!-- remaining characters become enemies -->
             <p id="enemies">
                 Enemies Available To Attack
                 <div id="enemies-container"></div>
             </p>
+            <!-- attack section -->
             <div id="fight-section">
                 <p>
                     Fight Section
                 </p>
                 <button id="attack">Attack!</button>
             </div>
+            <!-- selected enemy to fight against -->
             <p id="defender">
                 Defender
                 <div id="defender-container"></div>
@@ -80,7 +92,7 @@
         </div>
     </div>
 
-
+<!-- js file in repo -->
 <script src="../unit-4-game/assets/javascript/game.js"></script>
     
 </body>
