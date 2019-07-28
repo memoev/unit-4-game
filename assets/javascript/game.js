@@ -63,10 +63,8 @@ $('.character').click(function () {
 
     // element on emeny container becomes defender
     $('.enemy').click(function () {
-        console.log($('#defender-container').is(':empty'));
         if ($('#defender-container').is(':empty')) {
             let htmlEnemyString = $(this).html();
-            console.log(htmlEnemyString);
             $('#defender-container').append(htmlEnemyString)
 
             // counter attack power calculations
@@ -79,7 +77,6 @@ $('.character').click(function () {
             } else if ($(this).find('div').attr('id') === 'luke') {
                 counterAttack = Luke.attackPower * 1;
             }
-            console.log(counterAttack);
 
             // removing defender from enemies container + clearing subtitles
             $(this).remove();
@@ -102,13 +99,10 @@ $('.character').click(function () {
             // awesome math calculations between attack, counter attack and healths
             defenseEnemy =  defenseEnemy - attack;
             defenseCharacter = defenseCharacter - counterAttack;
-            console.log(defenseEnemy);
-            console.log(defenseCharacter);
             // subtitles for the user to understand what's happening
             $('#subtitles').text('You attacked ' + $('#defender-container').find('.character-name').text() + ' for ' + attack + ' damage.');
             // attack pumping up!!!
             attack = attack * 2;
-            console.log(attack);
             // overwrite of new health calculations
             $('#defender-container').find('.health').html(defenseEnemy);
             $('#selected-container').find('.health').html(defenseCharacter);
