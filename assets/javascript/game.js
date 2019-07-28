@@ -102,13 +102,14 @@ $('.character').click(function () {
     
             if (defenseEnemy <= 0) {
                 $('#subtitles').text('You just defeated ' + $('#defender-container').find('.character-name').text() + ', you can choose to fight another enemy.');
-                $('#subtitles-2').text('');  
+                $('#subtitles-2').empty();  
                 $('#defender-container').empty();
                 deathCounter++
             };
     
             if (defenseCharacter <= 0) {
-                $('#selected-container').empty();
+                $('#subtitles-2').empty();  
+                defeatCounter++;
             };
             
         } else {
@@ -123,6 +124,10 @@ $('.character').click(function () {
     
         if (deathCounter >= 3) {
             $('#subtitles').text('You won!! GAME OVER!');
+        }
+
+        if (defeatCounter >= 1) {
+            $('#subtitles').text('You have been defeated!! GAME OVER!');
         }
         
         // console.log($('#enemies-container').is(':empty'));
