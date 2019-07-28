@@ -81,7 +81,7 @@ $('.character').click(function () {
         }
     });
 
-    $(':button').click( function () {
+    $('#attack').click( function () {
 
         if (!$('#defender-container').is(':empty')) {
 
@@ -124,14 +124,21 @@ $('.character').click(function () {
     
         if (deathCounter >= 3) {
             $('#subtitles').text('You won!! GAME OVER!');
+            $('#restart').css('visibility', 'visible');
+            $('#attack').off('click');
         }
 
         if (defeatCounter >= 1) {
             $('#subtitles').text('You have been defeated!! GAME OVER!');
+            $('#restart').css('visibility', 'visible');
+            $('#attack').off('click');
         }
         
         // console.log($('#enemies-container').is(':empty'));
-
+        
+    });
+    $('#restart').click(function () { 
+        location.reload();
     });
   
 });
