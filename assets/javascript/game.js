@@ -17,8 +17,11 @@ var darthMaul = {
 var Luke = {
     attackPower: 6
 };
+var audioElementTheme = document.createElement("audio");
+audioElementTheme.setAttribute('src', '../unit-4-game/assets/tunes/starwars.mp3')
 
 $('.character').click(function () {
+    audioElementTheme.play();
     let htmlString = $(this).html();
     
     $('.character').each( function() {
