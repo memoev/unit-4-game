@@ -80,7 +80,10 @@ $('.character').click(function () {
 
             // removing defender from enemies container + clearing subtitles
             $(this).remove();
-            $('#subtitles').empty(); 
+            $('#subtitles').empty();
+            $('#subtitles-2').empty(); 
+            $('#subtitles-3').empty(); 
+
 
         } else {
             alert("Don't get ahead of yourself young Padawan. Even though the force is strong in you, take out one enemy at the time.");
@@ -111,8 +114,8 @@ $('.character').click(function () {
     
             // enemy defeated
             if (defenseEnemy <= 0) {
-                $('#subtitles').text('You just defeated ' + $('#defender-container').find('.character-name').text() + ', you can choose to fight another enemy.');
-                $('#subtitles-2').empty();  
+                $('#subtitles-3').text('You just defeated ' + $('#defender-container').find('.character-name').text() + ', you can choose to fight another enemy.');
+                //$('#subtitles-2').empty();  
                 $('#defender-container').empty();
                 // game over handler
                 deathCounter++
@@ -120,7 +123,7 @@ $('.character').click(function () {
     
             // selected character defeated
             if (defenseCharacter <= 0) {
-                $('#subtitles-2').empty();  
+                //$('#subtitles-2').empty();  
                 // game over handler
                 defeatCounter++;
             };
@@ -132,7 +135,7 @@ $('.character').click(function () {
         
         // logic to win the game
         if (deathCounter >= 3) {
-            $('#subtitles').text('You won!! GAME OVER!');
+            $('#subtitles-3').text('You won!! GAME OVER!');
             $('#restart').css('visibility', 'visible');
             // bug handling
             $('#attack').off('click');
@@ -140,10 +143,11 @@ $('.character').click(function () {
 
         // logic the loose the game
         if (defeatCounter >= 1) {
-            $('#subtitles').text('You have been defeated!! GAME OVER!');
+            $('#subtitles-3').text('You have been defeated!! GAME OVER!');
             $('#restart').css('visibility', 'visible');
             // bug handling
             $('#attack').off('click');
+            $('.enemy').off('click');
         }
         
     });
